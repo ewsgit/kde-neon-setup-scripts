@@ -21,7 +21,7 @@ sudo apt update
 
 yes_or_no "run \"ubuntu-drivers install\"? (only if you are sure this is an ubuntu distro)" && sudo ubuntu-drivers install
 
-sudo apt upgrade
+sudo pkcon update
 
 # copy kde config
 
