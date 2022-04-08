@@ -5,6 +5,8 @@ sudo apt install wget
 sudo apt install xclip
 sudo apt install libqt5svg5 qml-module-qtquick-controls
 
+mkdir tmp
+
 function yes_or_no {
     while true; do
         read -p "$* [y/n]: " yn
@@ -62,7 +64,8 @@ read -p "Please enter your github email (this is not verified): " github_email
 
 # copy result to clipboard
 
-ssh-keygen -t ed25519 -C "$github_email" | xclip -sel clip
+ssh-keygen -t ed25519 -C "$github_email"
+cat ~/.ssh/id_ed25519.pub | xclip -sel clip
 
 python3 -mwebbrowser "https://github.com/settings/keys"
 
@@ -93,7 +96,7 @@ cp ./assets/.bashrc ~/.bashrc
 
 # reload bash
 
-bash
+~/.bashrc
 
 # install nodejs lts from nvm
 
