@@ -110,7 +110,7 @@ nvm install --lts
 
 cd tmp
 
-curl --url "https://github.com/neovim/neovim/releases/download/v0.6.1/nvim.appimage" --output "neovim.appimage" 
+curl --url "https://objects.githubusercontent.com/github-production-release-asset-2e65be/16408992/16e6beba-fea4-4ff7-a09d-422929fbdf3d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220409T124454Z&X-Amz-Expires=300&X-Amz-Signature=4b6c5f13b71ff189e5ac5c285c36eac55944e5a4ce6acb8f2f2da83a0e5c5817&X-Amz-SignedHeaders=host&actor_id=69800526&key_id=0&repo_id=16408992&response-content-disposition=attachment%3B%20filename%3Dnvim.appimage&response-content-type=application%2Foctet-stream" --output "neovim.appimage" 
 
 mkdir ~/.neovimApp
 cp ./neovim.appimage ~/.neovimApp/nvim.appimage
