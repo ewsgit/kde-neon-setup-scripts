@@ -98,6 +98,10 @@ cp ./assets/.bashrc ~/.bashrc
 
 ~/.bashrc
 
+# install pip
+
+sudo nala install python3-pip
+
 # install nodejs lts from nvm
 
 nvm install --lts
@@ -128,6 +132,25 @@ read -p "please install all of the materia dark themes then press Enter to conti
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# install mpv and play-with-mpv for chromium browsers
+# install mpv
+sudo nala install mpv
+
+# install play-with-mpv
+pip install git+https://github.com/thann/play-with-mpv --user
+
+# remove youtube-dl
+rm ~/.local/bin/youtube-dl
+
+# install yt-dlp
+python3 -m pip install -U yt-dlp
+
+# replace youtube-dl with yt-dlp (improves performance drastically)
+mv ~/.local/bin/yt-dlp ~/.local/bin/youtube-dl
+
+# add to autostart script
+echo "#!/bin/bash\nplay-with-mpv" >> ~/.config/autostart/play-with-mpv-autostart.sh
 
 yes_or_no "allow reboot to apply changes?" && sudo reboot
 
